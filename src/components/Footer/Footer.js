@@ -1,8 +1,9 @@
-import { Component } from "react";
 import "./Footer.css";
 
-export default class Footer extends Component {
-  render() {
-    return <div className="footer">&copy; Jack Doy</div>;
-  }
+export default function Footer() {
+  return (
+    <div className="footer">
+      <span>&copy; Jack Doy</span>
+    </div>
+  );
 }
