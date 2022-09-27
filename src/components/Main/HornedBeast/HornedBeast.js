@@ -1,19 +1,20 @@
-import { Component } from "react";
+import { useState } from "react";
 
-class HornedBeast extends Component {
-  render() {
-    return (
-      <article className="article">
-        <h2>{this.props.title}</h2>
-        <img
-          title={this.props.title}
-          alt={this.props.title}
-          src={this.props.imageUrl}
-        />
-        <p>{this.props.description}</p>
-      </article>
-    );
-  }
+export default function HornedBeast({ title, imageUrl, description }) {
+  const [votes, setVotes] = useState(0);
+
+  const voteBeasts = () => {
+    setVotes(votes + 1);
+  };
+
+  return (
+    <article className="article">
+      <h2>{title}</h2>
+      <div className="img-container">
+        <img title={title} alt={title} src={imageUrl} onClick={voteBeasts} />
+      </div>
+      <p>{description}</p>
+      <span> ❤️ {votes}</span>
+    </article>
+  );
 }
-
-export default HornedBeast;
