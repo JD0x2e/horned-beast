@@ -1,7 +1,48 @@
 body {
   margin: 0 auto;
   background-color: rgb(66, 166, 116);
+  font-family: monospace;
 }
 
-.App {
+.modal {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-box {
+  background-color: grey;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+.modal-img {
+  width: 30vw;
+  height: 30vw;
+  object-fit: cover;
+  object-position: center;
+  border: 5px double;
+}
+
+.modal-button {
+  margin-left: 1rem;
+  padding: 0.5rem;
+  border-radius: 10px;
+  background-color: black;
+  color: white;
+}
+
+.modal-text {
+  margin-left: 1rem;
+  color: white;
+  font-size: 1.2rem;
 }
