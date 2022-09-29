@@ -5,3 +5,11 @@
   text-decoration: underline;
   min-height: 10vh;
 }
+
+.select {
+  margin-left: 1.5rem;
+  background-color: rgb(72, 206, 132);
+  border: solid 1px black;
+  border-radius: 7.5px;
+  padding: 0.1rem;
+}
