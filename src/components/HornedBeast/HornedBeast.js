@@ -7,20 +7,16 @@ export default function HornedBeast({ beastObj, title, imageUrl, description, ch
     setVotes(votes + 1);
   };
 
+  const handleClick = () => {
+    voteBeasts();
+    changeModal(beastObj);
+  };
+
   return (
     <article className="article">
       <h2 className="h2">{title}</h2>
       <div className="img-container">
-        <img
-          className="img"
-          title={title}
-          alt={title}
-          src={imageUrl}
-          onClick={() => {
-            voteBeasts();
-            changeModal(beastObj);
-          }}
-        />
+        <img className="img" title={title} alt={title} src={imageUrl} onClick={handleClick} />
       </div>
       <p className="description">{description}</p>
       <span> ❤️ {votes}</span>
